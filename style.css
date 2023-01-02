@@ -1,0 +1,267 @@
+:root{
+
+    /*Primary colors*/
+  
+    --Orange: hsl(25, 97%, 53%);
+   
+  
+    /*Neutral colors*/
+  
+    --White: hsl(0, 0%, 100%);
+    --LightGrey: hsl(217, 12%, 63%);
+    --MediumGrey: hsl(216, 12%, 54%);
+    --DarkBlue: hsl(213, 19%, 18%);
+    --VeryDarkBlue: hsl(216, 12%, 8%);
+  
+  
+  }
+
+
+
+
+/************************************************
+*************************************************
+0. CSS Reset ------------------------ 
+1. Universal Styles -----------------
+2. Main Body Styles ----------------- 
+3. Submit section --------------------
+4. Appreciaton section --------------------
+5. Responsiveness --------------------
+*************************************************
+************************************************/
+
+
+
+
+/*----------------------------------------------
+------------------------------------------------
+0. CSS Reset
+------------------------------------------------
+----------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  /*----------------------------------------------
+  ------------------------------------------------
+  1. Universal
+  ------------------------------------------------
+  ----------------------------------------------*/
+body {
+    height: 100vh;
+    background-color: rgb(10, 10, 10);
+    font-family:'Overpass';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1,h2{
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--White);
+}
+
+p{
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--LightGrey);
+}
+
+/*----------------------------------------------
+------------------------------------------------
+2. Main Body
+------------------------------------------------
+----------------------------------------------*/
+
+main{
+    height:415px;
+    width: 410px;
+    background-color: var(--VeryDarkBlue);
+    border-radius: 30px;
+
+    position: relative;
+}
+
+.card{
+    height: inherit;
+    width: inherit;
+    background-color: inherit;
+    border-radius: inherit;
+    padding: 40px 32px;
+
+    position: absolute;
+
+}
+.rate{
+z-index: 1;
+}
+
+
+/*----------------------------------------------
+------------------------------------------------
+2. Submit section
+------------------------------------------------
+----------------------------------------------*/
+
+.starIcon{
+    height: 45px;
+    width: 45px;
+    background-color: var(--DarkBlue);
+    border-radius: 100%;
+
+    position: relative;
+}
+.starIcon::before{
+    content: url(images/icon-star.svg);
+    position: absolute;
+    top: 50%; right: 50%;
+    transform: translate(50%,-40%);
+}
+
+h1{
+    margin-top: 30px;
+}
+
+p{
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+ul{
+    margin-top: 26px;
+    list-style: none;
+    color: var(--LightGrey);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+li{
+    height: 50px;
+    width: 50px;
+    font-size: 17px;
+    font-weight: 500;
+    background-color: var(--DarkBlue);
+    border-radius: 100%;
+
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.submit{
+    display: block;
+    margin-top: 32px;
+    padding: 12.5px 0;
+    border-radius: 30px;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: var(--White);
+    text-align: center;
+    text-transform: uppercase;
+    background-color: var(--Orange);
+}
+
+/*HOVERS*/
+
+li:hover{
+    background-color: var(--LightGrey) !important;
+    color: var(--White);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.submit:hover{
+    background-color: var(--White);
+    color: var(--Orange);
+    transition: .3s;
+}
+
+
+
+/*----------------------------------------------
+------------------------------------------------
+4. Appreciate section
+------------------------------------------------
+----------------------------------------------*/
+
+.appreciate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.userRating{
+    margin-top: 40px;
+    height:30px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    background-color: var(--DarkBlue);
+    color: var(--Orange);
+}
+.appreciate h2{
+    margin-top: 35px;
+}
+.appreciate p{
+    text-align: center;
+
+}
+
+
+
+/*----------------------------------------------
+------------------------------------------------
+5. Responsiveness
+------------------------------------------------
+----------------------------------------------*/
+
+@media screen and (max-width: 500px){
+    main{
+        height: 360px;
+        width: 330px;
+    }
+    h1,h2{
+        margin-top: 25px;
+        font-size: 20px;
+    }
+    
+    p{
+        font-size: 12px;
+    }
+    li{
+        height: 40px;
+        width: 40px;
+        font-size: 15px;
+    }
+    .submit{
+        height: 36px;
+        margin-top: 26px;
+        padding: 12px 0;
+        font-size: 14px;
+    }
+
+
+    .userRating{
+        margin-top: 25px;
+        height:25px;
+        padding: 5px 20px;
+        border-radius: 20px;
+        background-color: var(--DarkBlue);
+        color: var(--Orange);
+    }
+    .appreciate h2{
+        margin-top: 25px;
+    }
+    .appreciate p{
+        text-align: center;
+    
+    }
+    
+}
